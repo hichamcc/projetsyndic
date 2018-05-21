@@ -1,0 +1,41 @@
+<nav class="navbar navbar-inverse navbar-fixed-top" style="opacity: .9">
+    
+     <div class="navbar-header">
+   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+      </button>        
+      <a class="navbar-brand" href="#">  <img src="../../../assets/img/flogo.png" width="120" height="35" class="d-inline-block  align-top" alt=""> </a>
+
+    </div>
+    <div  class="collapse navbar-collapse navbar-responsive-collapse" id="myNavbar">
+      <ul class="nav nav-pills nav-stacked">
+        <li [routerLinkActive]="['active']" [routerLinkActive]="{exact:true}" >
+          <a  [routerLink]="['/home']" >Acceuil</a>
+        </li>
+        <li [routerLinkActive]="['active']" [routerLinkActive]="{exact:true}" >
+          <a  [routerLink]="['/contact']">Comptes</a>
+        </li>
+        <li [routerLinkActive]="['active']" [routerLinkActive]="{exact:true}" >
+          <a  [routerLink]="['/reunion']">Réunion</a>
+        </li>
+        <li [routerLinkActive]="['active']" [routerLinkActive]="{exact:true}" >
+          <a  [routerLink]="['/paiment']">paiment</a>
+        </li>
+        <li [routerLinkActive]="['active']" [routerLinkActive]="{exact:true}" >
+          <a  [routerLink]="['/infos']">informations</a>
+        </li>
+        <form class="navbar-form navbar-left" action="/action_page.php" >
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" >
+            <div class="input-group-btn">
+              <button class="btn btn-default" type="submit">
+                <i class="glyphicon glyphicon-search"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+          </ul>
+  </div> 
+</nav>

@@ -1,0 +1,98 @@
+<br>
+<br>
+<br>
+<div class="container ">
+    <h1 class="page-header">Programmer une réunion</h1>
+    <form (submit)="addReunion()">
+        <div class="form-group">
+           <label>date</label>
+           <input type="date" [(ngModel)] = "dater" name="dater" class="form-control">  
+        </div>
+        <div class="form-group">
+                <label>objet</label>
+                <input type="text" [(ngModel)] = "objetr" name="objetr" class="form-control">  
+            </div>
+         
+          
+          <input type="submit" class="btn btn btn-success" value="Ajouter">
+        </form>
+</div>
+<div  class="container" >
+        <h1 class="page-header">les Réunions</h1>
+        <table  class="table table-hover">
+                <div  *ngFor = "let reunion of reunions">     
+        <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>objet</th>
+                    
+                    <th></th>
+                    <th>saisir le compte rendu</th>
+                </tr>
+                </thead>
+             
+                <tbody> 
+           
+     <tr>
+         <td> 
+             
+            
+         {{ reunion.dater  }}</td>
+            
+         <td> {{ reunion.objetr  }}</td>
+
+        
+     <td> <input type="button" (click)= "deleteReunion(reunion._id)" value="supprimer" class="btn btn-danger">  </td>    
+        <td>
+  
+         <!-- pop up -->
+
+             <!-- Trigger the modal with a button -->
+             <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">compte rendu</button>
+             <!-- Modal -->
+             <div id="myModal" class="modal fade"  role="dialog">
+                   <div role="document">
+                 
+                     <!-- Modal content-->
+                     <div class="modal-content">
+                       <div class="modal-header" >
+                         <button type="button" class="close" onclick="afficher()" data-dismiss="modal">&times;</button>
+                         <h4 class="modal-title"  ></h4>
+                       </div>
+                       <div class="modal-body">
+                               <form (submit)="addRendu()">
+                                       
+                                       <div class="form-group">
+                                               <div class="form-group">
+                                                       <label>objet : </label>  
+                                                       
+                                                      <td>{{ reunion.objetr}}</td>
+                                                       
+                                                   </div>
+                                               <label>compte rendu</label>
+                                               <textarea rows="5" [(ngModel)] = "rendu" name="rendu" class="form-control">  </textarea>
+                                           </div>
+                                           
+                                         
+                                         <input type="submit" class="btn btn btn-success" value="Ajouter">
+                                       </form>
+                       </div>
+                       <div class="modal-footer">
+                         <button type="button" (click)="ServiceModal.close('myModal');" class="btn btn-danger" data-dismiss="modal">Close</button>
+                       </div>
+                     </div>
+                 
+                   </div>
+                 </div>
+          
+        </td>
+            </tr>
+            
+     </tbody>          
+    </div> 
+     </table>
+   
+     </div> 
+
+  
+ 

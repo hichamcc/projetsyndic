@@ -5,20 +5,26 @@ const contschema = mongoose.Schema({
     
     
     
-    first_name :{
+    name :{
         
         type: String,
         required: true
         
     },
     
-        last_name :{
+        appart :{
         
         type: String,
         required: true
         
     },
-            code :{
+    tel :{
+        
+        type: String,
+        required: true
+        
+    },
+    code :{
         
         type: String,
         required: true

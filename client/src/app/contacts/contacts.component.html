@@ -3,12 +3,16 @@
     <h1 class="page-header">Add Copro</h1>
     <form (submit)="addContact()">
         <div class="form-group">
-           <label>First Name</label>
-           <input type="text" [(ngModel)] = "first_name" name="first_name" class="form-control">  
+           <label>Nom</label>
+           <input type="text" [(ngModel)] = "name" name="name" class="form-control">  
         </div>
         <div class="form-group">
-                <label>Last Name</label>
-                <input type="text" [(ngModel)] = "last_name" name="last_name" class="form-control">  
+                <label>Apparetment</label>
+                <input type="text" [(ngModel)] = "appart" name="appart" class="form-control">  
+            </div>
+            <div class="form-group">
+                <label>Tel</label>
+                <input type="text" [(ngModel)] = "tel" name="tel" class="form-control">  
             </div>
             <div class="form-group">
                     <label>code</label>
@@ -22,17 +26,20 @@
 <hr>
 
 <div class="container" >
-        <h1 class="page-header">Add Copro</h1>
+        <h1 class="page-header">Listes des Copros</h1>
         <div *ngFor = "let contact of contacts">
         
             <div class="col-md-3">
-                -first name  : {{ contact.first_name  }}
+                -Nom  : {{ contact.name  }}
             </div>
             <div class="col-md-3">
-                -last name : {{    contact.last_name  }}
+                -Telphone: {{  contact.tel  }}
           </div>
           <div class="col-md-3">
-                -code d'accee  : {{  contact.code }}
+            -apparetement  : {{  contact.appart }}
+    </div>
+          <div class="col-md-3">
+                -code d'accée  : {{  contact.code }}
         </div>
 
          <div class="col-md-3">

@@ -1,7 +1,8 @@
 export class contact {
 
     _id?: string;
-    first_name: string;
-    last_name: string;
+    name: string;
+    appart: string;
+    tel: string;
     code: string;
 }
